@@ -12,6 +12,7 @@ const config: Config = {
         pretendard: ["var(--font-pretendard)", "sans-serif"],
       },
       screens: {
+        xs: { max: "420px" },
         m: { max: "1068px" },
         s: { max: "768px" },
       },
