@@ -78,7 +78,7 @@ const Signup03: React.FC<Signup03Type> = ({ setUserData }) => {
   }, []);
 
   return (
-    <div className="s:w-[370px] s:h-[590px] xs:h-[610px] w-[430px] h-[630px] relative bg-background rounded-[20px] p-4 select-none">
+    <div className="s:w-[370px] s:h-[590px] xs:h-[630px] w-[430px] h-[630px] relative bg-background rounded-[20px] p-4 select-none">
       {prevStep && (
         <button onClick={prevStep} className="absolute left-9 top-10 text-[c4c4c4]">
           &larr;
