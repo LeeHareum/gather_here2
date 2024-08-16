@@ -1,5 +1,4 @@
 "use client";
-
 import React, { useEffect, useState } from "react";
 import { PostWithUser } from "@/types/posts/Post.type";
 import Image from "next/image";
@@ -8,12 +7,10 @@ import DOMPurify from "dompurify";
 import LikeButton from "@/components/MainDetail/LikeButton";
 import { useUser } from "@/provider/UserContextProvider";
 import dayjs from "dayjs";
-
 interface PostCardProps {
   post: PostWithUser;
   style?: React.CSSProperties;
 }
-
 const PostCardShort: React.FC<PostCardProps> = ({ post }) => {
   const { user: currentUser } = useUser();
   const [isMounted, setIsMounted] = useState<boolean>(false);
@@ -24,17 +21,13 @@ const PostCardShort: React.FC<PostCardProps> = ({ post }) => {
   const daysLeft = Math.ceil((deadlineDate.getTime() - Date.now()) / (1000 * 60 * 60 * 24));
   const displayDaysLeft = daysLeft === 0 ? "D-day" : `D-${daysLeft.toFixed(0)}`;
   const defaultImage = "/assets/header/user.svg";
-
   useEffect(() => {
     setIsMounted(true);
-
     return () => {
       setIsMounted(false);
     };
   }, [post]);
-
   const getProfileImageUrl = (url: string) => `${url}?${new Date().getTime()}`;
-
   const jobTitleClassMap: { [key: string]: string } = {
     프론트엔드: "text-primary",
     IOS: "text-accentPurple",
@@ -86,7 +79,7 @@ const PostCardShort: React.FC<PostCardProps> = ({ post }) => {
                 <p className="text-sm text-labelNeutral truncate">{post.user?.nickname}</p>
               </div>
             </div>
-            <div className="text-subtitle flex items-center justify-between bg-fillNormal p-3 rounded-lg truncate">
+            <div className="text-subtitle xs:text-base flex items-center justify-between bg-fillNormal p-3 rounded-lg truncate">
               <div className="flex-1 text-left truncate">
                 {post.target_position?.length > 0 && (
                   <>

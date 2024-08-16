@@ -36,8 +36,6 @@
   .swiper-button-next:after {
     font-size: 20px !important;
     font-weight: 600 !important;
-    top: 50%;
-    transform: translateY(-50%);
   }
   .post-card .p-5 {
     height: 168px;

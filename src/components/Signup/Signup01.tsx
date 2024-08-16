@@ -24,7 +24,7 @@ const Signup01: React.FC = () => {
   const { selectedJob, handleJobSelection, handleSkip } = useSelectJob();
 
   return (
-    <div className="s:w-[370px] s:h-[590px] w-[430px] h-[610px] relative bg-background rounded-[20px] p-4 select-none">
+    <div className="s:w-[370px] s:h-[580px] w-[430px] h-[610px] relative bg-background rounded-[20px] p-4 select-none">
       <SkipButton onSkip={handleSkip} />
 
       <div className="absolute left-1/2 transform -translate-x-1/2 top-4 flex space-x-2">
