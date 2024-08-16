@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react';
-import { UseFormRegister, UseFormWatch } from 'react-hook-form';
-import { FormValues } from '../Signup03';
+import React, { useEffect } from "react";
+import { UseFormRegister, UseFormWatch } from "react-hook-form";
+import { FormValues } from "../Signup03";
 
 interface BlogInputProps {
   register: UseFormRegister<FormValues>;
@@ -12,7 +12,15 @@ interface BlogInputProps {
   validateUrl: (url: string) => boolean;
 }
 
-const BlogInput: React.FC<BlogInputProps> = ({ register, watch, blogError, blogSuccess, setBlogError, setBlogSuccess, validateUrl }) => {
+const BlogInput: React.FC<BlogInputProps> = ({
+  register,
+  watch,
+  blogError,
+  blogSuccess,
+  setBlogError,
+  setBlogSuccess,
+  validateUrl,
+}) => {
   const blog = watch("blog");
 
   useEffect(() => {
@@ -37,7 +45,7 @@ const BlogInput: React.FC<BlogInputProps> = ({ register, watch, blogError, blogS
         type="text"
         placeholder="URL을 입력해주세요"
         {...register("blog")}
-        className="block s:w-[300px] w-[350px] s:mt-1 mt-3 ml-5 h-[50px] p-2 bg-background rounded-md border-2 border-fillLight"
+        className="block focus:outline-primaryHeavy s:w-[300px] w-[350px] s:mt-1 mt-3 ml-5 h-[50px] p-2 bg-background rounded-md border-2 border-fillLight"
       />
       <p className="text-xs text-gray-500 ml-5 mt-2">Blog / Github / Notion / Tistory / Velog / Figma / Etc</p>
       {blogError && <p className="text-xs text-red-500 s:mt-1 mt-1 ml-5">{blogError}</p>}

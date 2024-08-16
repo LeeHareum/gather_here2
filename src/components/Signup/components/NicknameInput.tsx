@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react';
-import { UseFormRegister, FieldErrors, UseFormWatch } from 'react-hook-form';
-import { FormValues } from '../Signup03';
+import React, { useEffect } from "react";
+import { UseFormRegister, FieldErrors, UseFormWatch } from "react-hook-form";
+import { FormValues } from "../Signup03";
 
 interface NicknameInputProps {
   register: UseFormRegister<FormValues>;
@@ -30,17 +30,17 @@ const NicknameInput: React.FC<NicknameInputProps> = ({ register, errors, nicknam
       <input
         type="text"
         placeholder="닉네임을 입력해주세요"
-        {...register("nickname", { 
-          required: "닉네임을 입력해주세요.", 
-          minLength: { value: 2, message: "닉네임은 2 ~ 11자 내로 작성해주세요." }, 
+        {...register("nickname", {
+          required: "닉네임을 입력해주세요.",
+          minLength: { value: 2, message: "닉네임은 2 ~ 11자 내로 작성해주세요." },
           maxLength: { value: 11, message: "닉네임은 2 ~ 11자 내로 작성해주세요." },
-          validate: value => {
+          validate: (value) => {
             if (value.trim() === "") return "닉네임에 공백이 포함될 수 없습니다.";
             if (/\s/.test(value)) return "닉네임에 공백이 포함될 수 없습니다.";
             return true;
-          }
+          },
         })}
-        className="block s:w-[300px] w-[350px] s:mt-1 mt-3 ml-5 h-[50px] p-2 bg-background rounded-md border-2 border-fillLight"
+        className="block focus:outline-primaryHeavy s:w-[300px] w-[350px] s:mt-1 mt-3 ml-5 h-[50px] p-2 bg-background rounded-md border-2 border-fillLight"
       />
       <p className={`text-xs mt-2 ml-5 ${getNicknameMessageClass()}`}>
         {errors.nickname
