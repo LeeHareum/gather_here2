@@ -78,7 +78,7 @@ const Signup03: React.FC<Signup03Type> = ({ setUserData }) => {
   }, []);
 
   return (
-    <div className="s:w-[370px] s:h-[620px] w-[430px] h-[610px] relative bg-background rounded-[20px] p-4 select-none">
+    <div className="s:w-[370px] s:h-[590px] w-[430px] h-[630px] relative bg-background rounded-[20px] p-4 select-none">
       {prevStep && (
         <button onClick={prevStep} className="absolute left-9 top-10 text-[c4c4c4]">
           &larr;
@@ -100,7 +100,8 @@ const Signup03: React.FC<Signup03Type> = ({ setUserData }) => {
 
       <div className="text-center text-2xl font-medium text-[#fffff] leading-9 mt-20">거의 다 왔어요!</div>
       <div className="text-center text-[#9a9a9a] s:mt-1 mt-3">
-        자신을 나타낼 수 있는 포트폴리오 링크를 알려주시면 <br /> 함께 할 동료를 만나는 데 큰 도움이 될거예요.
+        자신을 나타낼 수 있는 포트폴리오 링크를 알려주시면 <br className="s:hidden" /> 함께 할 동료를 만나는 데 큰
+        도움이 될거예요.
       </div>
 
       <form onSubmit={handleSubmit(handleFormSubmit)}>
