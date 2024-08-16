@@ -12,7 +12,7 @@ const supabase = createClient();
 
 export interface FormValues {
   nickname: string;
-  blog?: string;   
+  blog?: string;
 }
 
 interface Signup03Type {
@@ -78,7 +78,7 @@ const Signup03: React.FC<Signup03Type> = ({ setUserData }) => {
   }, []);
 
   return (
-    <div className="s:w-[370px] s:h-[550px] w-[430px] h-[610px] relative bg-background rounded-[20px] p-4 select-none">
+    <div className="s:w-[370px] s:h-[560px] w-[430px] h-[610px] relative bg-background rounded-[20px] p-4 select-none">
       {prevStep && (
         <button onClick={prevStep} className="absolute left-9 top-10 text-[c4c4c4]">
           &larr;
@@ -87,19 +87,13 @@ const Signup03: React.FC<Signup03Type> = ({ setUserData }) => {
       <div className="absolute left-1/2 transform -translate-x-1/2 top-4 flex space-x-2">
         <div className="w-[136px] s:h-18 h-20 justify-start items-center gap-2 inline-flex">
           <div className="w-10 h-10 p-2.5 rounded-[11px] border border-[#28282a] flex-col justify-center items-center gap-2.5 inline-flex">
-            <div className="self-stretch text-center text-[#5e5e5e] text-sm font-medium font-['Pretendard'] leading-[21px]">
-              1
-            </div>
+            <div className="self-stretch text-center text-[#5e5e5e] text-sm font-medium leading-[21px]">1</div>
           </div>
           <div className="w-10 h-10 p-2.5 rounded-[11px] border border-[#28282a] flex-col justify-center items-center gap-2.5 inline-flex">
-            <div className="self-stretch text-center text-[#5e5e5e] text-sm font-medium font-['Pretendard'] leading-[21px]">
-              2
-            </div>
+            <div className="self-stretch text-center text-[#5e5e5e] text-sm font-medium leading-[21px]">2</div>
           </div>
           <div className="w-10 h-10 p-2.5 rounded-[11px] border border-[#c3e88d] flex-col justify-center items-center gap-2.5 inline-flex">
-            <div className="self-stretch text-center text-[#c3e88d] text-sm font-medium font-['Pretendard'] leading-[21px]">
-              3
-            </div>
+            <div className="self-stretch text-center text-[#c3e88d] text-sm font-medium leading-[21px]">3</div>
           </div>
         </div>
       </div>
