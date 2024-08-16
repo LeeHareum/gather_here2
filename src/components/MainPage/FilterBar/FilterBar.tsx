@@ -44,10 +44,10 @@ const FilterBar: React.FC<FilterBarProps> = ({
         <select
           className={`shared-select-gray-2 ${
             selectedPosition ? "shared-select" : "shared-select-gray-2"
-          } cursor-pointer xs:text-baseS`}
+          } cursor-pointer`}
           value={selectedPosition}
           onChange={handlePositionChange}
-          style={{ height: "40px", minHeight: "40px", lineHeight: "38px", padding: "0 1rem" }}
+          style={{ height: "40px", minHeight: "40px", lineHeight: "15px", padding: "0 1rem" }}
         >
           <option value="">직군</option>
           <option value="프론트엔드">프론트엔드</option>
