@@ -16,7 +16,7 @@ const Signup04: React.FC = () => {
   };
 
   return (
-    <div className="s:w-[370px] s:h-[560px] w-[430px] h-[610px] relative bg-background rounded-[20px] p-4 select-none">
+    <div className="s:w-[370px] s:h-[590px] w-[430px] h-[610px] relative bg-background rounded-[20px] p-4 select-none">
       <div className="text-center s:mt-1 mt-3">
         <div className="w-full h-65 pt-3 rounded-md mb-4 flex items-center justify-center overflow-hidden">
           <img

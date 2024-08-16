@@ -31,14 +31,20 @@
 .swiper-button-disabled {
   display: none !important;
 }
-
-@media (min-width: 0px) and (max-width: 639px) {
+@media only screen and (max-width: 768px) {
+  .swiper-button-prev:after,
+  .swiper-button-next:after {
+    font-size: 1.2rem !important;
+    font-weight: 600 !important;
+    top: 50%;
+    transform: translateY(-50%);
+  }
   .post-card .p-5 {
-    height: 10.5rem; /* sm 이하일 때 카드 높이  */
+    height: 10.5rem; /* s 이하일 때 카드 높이  */
   }
 
   .swiper {
-    height: 11.5rem; /* sm 이하일 때 페이지네이션 높이 */
+    height: 12.1rem; /* s 이하일 때 페이지네이션 높이 */
   }
 }
 
