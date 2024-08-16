@@ -69,7 +69,9 @@ const PostCardLong: React.FC<PostCardProps> = ({ post }) => {
       </div>
       <Link href={`/maindetail/${post.post_id}`}>
         <h2 className="text-left text-subtitle mt-3 font-base text-labelStrong truncate w-3/4">{post.title}</h2>
-        <p className="mt-2 mb-4 h-11 overflow-hidden text-left font-thin line-clamp-2 text-fontWhite">{cleanContent}</p>
+        <p className="mt-2 mb-4 s:h-11 xs:h-14 overflow-hidden text-left font-thin line-clamp-2 text-fontWhite">
+          {cleanContent}
+        </p>
         <div className="flex items-center mb-4">
           {post.user?.profile_image_url && (
             <div className="relative w-7 h-7 mr-2">
