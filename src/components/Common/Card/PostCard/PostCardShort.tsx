@@ -79,7 +79,7 @@ const PostCardShort: React.FC<PostCardProps> = ({ post }) => {
                 <p className="text-sm text-labelNeutral truncate">{post.user?.nickname}</p>
               </div>
             </div>
-            <div className="text-subtitle xs:text-base flex items-center justify-between bg-fillNormal p-3 rounded-lg truncate">
+            <div className="text-subtitle xs:text-base flex items-center justify-between bg-fillNormal p-3 xs:p-2 rounded-lg truncate">
               <div className="flex-1 text-left truncate">
                 {post.target_position?.length > 0 && (
                   <>
