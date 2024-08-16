@@ -44,7 +44,7 @@ const FilterBar: React.FC<FilterBarProps> = ({
         <select
           className={`shared-select-gray-2 ${
             selectedPosition ? "shared-select" : "shared-select-gray-2"
-          } cursor-pointer`}
+          } cursor-pointer xs:leading-tight xs:pt-1`}
           value={selectedPosition}
           onChange={handlePositionChange}
           style={{ height: "40px", minHeight: "40px", lineHeight: "38px", padding: "0 1rem" }}
