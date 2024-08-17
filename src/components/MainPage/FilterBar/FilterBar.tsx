@@ -64,7 +64,7 @@ const FilterBar: React.FC<FilterBarProps> = ({
           className={`shared-select-gray-2 ${selectedPlace ? "shared-select" : "shared-select-gray-2"} cursor-pointer`}
           value={selectedPlace}
           onChange={handlePlaceChange}
-          style={{ height: "40px", minHeight: "40px", lineHeight: "38px", padding: "0 1rem" }}
+          style={{ height: "40px", minHeight: "40px", lineHeight: "15px", padding: "0 1rem" }}
         >
           <option value="">방식</option>
           <option value="온/오프라인">온/오프라인</option>
@@ -77,7 +77,7 @@ const FilterBar: React.FC<FilterBarProps> = ({
           } cursor-pointer`}
           value={selectedLocation}
           onChange={handleLocationChange}
-          style={{ height: "40px", minHeight: "40px", lineHeight: "38px", padding: "0 1rem" }}
+          style={{ height: "40px", minHeight: "40px", lineHeight: "15px", padding: "0 1rem" }}
         >
           <option value="">지역</option>
           <option value="서울">서울</option>
@@ -95,7 +95,7 @@ const FilterBar: React.FC<FilterBarProps> = ({
           } cursor-pointer`}
           value={selectedDuration !== null ? selectedDuration.toString() : ""}
           onChange={handleDurationChange}
-          style={{ height: "40px", minHeight: "40px", lineHeight: "38px", padding: "0 1rem" }}
+          style={{ height: "40px", minHeight: "40px", lineHeight: "15px", padding: "0 1rem" }}
         >
           <option value="">기간</option>
           <option value="1">1개월</option>
