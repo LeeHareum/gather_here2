@@ -46,6 +46,14 @@
   }
 }
 
+@media (max-width: 420px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    opacity: 1 !important; /* xs 크기에서 화살표 항상 보이기 */
+    pointer-events: auto !important; /* 클릭 가능하도록 */
+  }
+}
+
 @media (min-width: 640px) {
   .swiper {
     height: 280px; /* 페이지네이션 높이 */

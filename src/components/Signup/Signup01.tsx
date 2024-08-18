@@ -36,7 +36,7 @@ const Signup01: React.FC = () => {
             <div className="self-stretch text-center text-[#5e5e5e] text-sm font-medium leading-[21px]">2</div>
           </div>
           <div className="w-10 h-10 p-2.5 rounded-[11px] border border-[#28282a] flex-col justify-center items-center gap-2.5 inline-flex">
-            <div className="self-stretch text-center text-[#5e5e5e] text-sm font-medium  leading-[21px]">3</div>
+            <div className="self-stretch text-center text-[#5e5e5e] text-sm font-medium leading-[21px]">3</div>
           </div>
         </div>
       </div>
