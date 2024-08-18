@@ -1,6 +1,9 @@
 .swiper-button-next,
 .swiper-button-prev {
   color: #919191;
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
 }
 
 .swiper-pagination-bullet {
@@ -15,13 +18,6 @@
   bottom: -6px;
 }
 
-.swiper-button-next,
-.swiper-button-prev {
-  opacity: 0;
-  transition: opacity 0.3s;
-  pointer-events: none;
-}
-
 .relative:hover .swiper-button-next:not(.swiper-button-disabled),
 .relative:hover .swiper-button-prev:not(.swiper-button-disabled) {
   opacity: 1;
@@ -31,12 +27,21 @@
 .swiper-button-disabled {
   display: none !important;
 }
-@media only screen and (max-width: 768px) {
+
+@media (max-width: 768px) {
+  /* s 이하 */
+  .swiper-button-next,
+  .swiper-button-prev {
+    opacity: 1 !important; /* s 및 xs 크기에서 항상 보이도록 */
+    pointer-events: auto !important; /* 클릭 가능하도록 */
+  }
+
   .swiper-button-prev:after,
   .swiper-button-next:after {
     font-size: 20px !important;
     font-weight: 600 !important;
   }
+
   .post-card .p-5 {
     height: 168px;
   }
@@ -47,10 +52,26 @@
 }
 
 @media (max-width: 420px) {
+  /* xs 크기 */
   .swiper-button-next,
   .swiper-button-prev {
-    opacity: 1 !important; /* xs 크기에서 화살표 항상 보이기 */
+    opacity: 1 !important; /* xs 크기에서 항상 보이도록 */
     pointer-events: auto !important; /* 클릭 가능하도록 */
+  }
+}
+
+@media (min-width: 1069px) {
+  /* m 크기 이상 */
+  .swiper-button-next,
+  .swiper-button-prev {
+    opacity: 0; /* 기본 상태에서는 보이지 않음 */
+    pointer-events: none; /* 클릭 불가능 */
+  }
+
+  .relative:hover .swiper-button-next:not(.swiper-button-disabled),
+  .relative:hover .swiper-button-prev:not(.swiper-button-disabled) {
+    opacity: 1; /* 호버 시에만 보이도록 */
+    pointer-events: auto; /* 클릭 가능하도록 */
   }
 }
 
